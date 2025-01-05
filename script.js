@@ -46,7 +46,6 @@ $(document).ready(function () {
             let duration = `${duration_min}:${duration_sec}`;
             let popularity = track.popularity;
   
-            // Género no está directamente en la información de la pista, se necesita una llamada adicional
             // Aquí simplificamos mostrando la información básica
             let songInfoHTML = `
               <div class='song'>

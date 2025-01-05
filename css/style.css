@@ -1,10 +1,135 @@
-.song {
-  margin: 20px 0;
-  text-align: center;
+/* Fondo general */
+body {
+  background-image: linear-gradient(to bottom right, #1DB954, #191414);
   color: #fff;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Buscador */
+.buscar-caja {
+  position: relative;
+  margin-top: 5%;
+  margin-bottom: 30px;
+}
+
+.buscar-txt {
+  width: 300px;
+  padding: 10px 20px;
+  border-radius: 50px;
+  border: none;
+  outline: none;
+  background-color: #fff;
+  color: #333;
+  font-size: 16px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.buscar-txt::placeholder {
+  color: #aaa;
+}
+
+.buscar-btn {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #1DB954;
+  color: #fff;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.buscar-btn:hover {
+  background-color: #fff;
+  color: #1DB954;
+}
+
+/* Contenedor de la canción */
+#song-list {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.song {
+  width: 80%;
+  max-width: 600px;
+  background-color: #333;
+  border-radius: 20px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.song:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+/* Títulos y texto */
+.song h2 {
+  margin: 0;
+  font-size: 22px;
+  color: #1DB954;
 }
 
 .song p {
-  margin: 5px 0;
+  margin: 10px 0;
   font-size: 16px;
+  color: #ccc;
+}
+
+/* Reproductor */
+iframe {
+  width: 100%;
+  border-radius: 10px;
+  margin-top: 15px;
+}
+
+/* Enlaces y botones */
+a {
+  color: #1DB954;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.btn-primary {
+  background: #1DB954;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  padding: 10px 20px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+  background-color: #14833b;
+}
+
+/* Media queries para pantallas pequeñas */
+@media (max-width: 768px) {
+  .buscar-txt {
+      width: 80%;
+  }
+
+  .song {
+      width: 90%;
+  }
 }
