@@ -28,8 +28,8 @@ $(document).ready(function () {
 
     const accessToken = getUrlParameter('access_token');
 
-    let client_id = "affbae1e92c946faa5859434a9805712";
-    let redirect_uri = encodeURIComponent("https://sdeenis.github.io/spotify/");
+    let client_id = "7205d00e7c964f58a560668a763ff3c7";
+    let redirect_uri = encodeURIComponent("https://jojifenix.github.io/spotify/");
     const redirect = `https://accounts.spotify.com/authorize?client_id=${client_id}&response_type=token&redirect_uri=${redirect_uri}`;
 
     if (accessToken == null || accessToken == "" || accessToken == undefined) {
