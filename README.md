@@ -1,1 +1,1 @@
-# conection usign jquery with spotify apip
+# conection using jquery with spotify api
