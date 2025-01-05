@@ -1,0 +1,138 @@
+<!-- ------------------------------------------ -->
+<!--  -->
+<!-- ------------------------------------------ -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>API Spotify</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <style>
+    html {
+      --dot-bg: black;
+      --dot-color: white;
+      --dot-size: 1px;
+      --dot-space: 22px;
+      background:
+        linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+        var(--dot-color);
+      color: white;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 100vh;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(0, 0, 0, 0.8);
+      padding: 20px;
+
+      border-radius: 10px;
+      border-top: 5px solid white;
+      border-bottom: 5px solid white;
+    }
+
+    form input {
+      padding: 10px;
+      margin-bottom: 10px;
+      width: 300px;
+      border: 1px solid white;
+      border-radius: 5px;
+      background-color: black;
+      color: white;
+    }
+
+    form input::placeholder {
+      color: #ddd;
+    }
+
+    form button {
+      padding: 10px 20px;
+      margin: 5px;
+      cursor: pointer;
+
+      border-radius: 5px;
+      background-color: black;
+      color: white;
+      transition: all 0.3s ease-in-out;
+    }
+
+    form button:hover {
+      background-color: white;
+      color: black;
+      transform: scale(1.1);
+    }
+
+    #resultado {
+      margin-top: 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border-top: 5px solid white;
+      border-bottom: 5px solid white;
+      padding: 20px;
+      background-color: rgba(0, 0, 0, 0.8);
+      border-radius: 10px;
+      
+    }
+
+    #resultado img {
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+    }
+
+    #resultado h1 {
+      font-size: 1.8em;
+      margin: 10px 0;
+      text-align: center;
+    }
+
+    #resultado p {
+      font-size: 1.2em;
+      text-align: center;
+    }
+
+    #resultado a {
+      font-size: 1.2em;
+      text-align: center;
+    }
+
+    audio {
+      margin-top: 10px;
+      border: 2px solid white;
+      border-radius: 10px;
+      background-color: black;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    }
+  </style>
+</head>
+
+<body>
+  <form id="form">
+    <input id="campo" type="text" placeholder="Introduce el nombre de la canción...">
+    <div class="botones">
+      <button id="enviar" type="submit">Enviar</button>
+      <button id="reset" type="reset">Cancelar</button>
+    </div>
+  </form>
+  <div id="resultado"></div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
